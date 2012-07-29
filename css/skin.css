@@ -1,0 +1,122 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+html {
+   -webkit-font-smoothing: antialiased;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+strong {
+   font-weight: bold;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/* Style */
+body {
+   background: #fff url(images/brick-bg-seamless-small.jpg) 50% 0;
+   font-family: 'Dosis', 'Arial', sans-serif;
+   font-weight: 300;
+}
+
+#header {
+   width: 100%;
+   max-width: 978px;
+   margin: 0 auto 10px auto;  
+}
+
+   #logo {
+      width: 166px;
+      height: 170px;
+      margin-top: 2px;
+   }
+
+   #nav {
+      float: right;
+      margin: 20px 0;
+   }
+
+      .nav-item {
+         display: block;
+         float: left;
+         width: 130px;
+         height: 130px;
+
+         text-align: center;
+         text-decoration: none;
+         -webkit-border-radius: 130px;
+         -moz-border-radius: 130px;
+         border-radius: 130px;
+      }
+         .nav-item:hover .nav-label {
+            border-bottom: #0f3535 solid 2px;            
+         }
+         .nav-item.active {
+            color: #fff; 
+            background-color: #f07e13;            
+         }
+         .nav-item.active .nav-label {
+            color: #fff; 
+         }
+         .nav-item.active:hover .nav-label {
+            border-bottom: #fff solid 2px;  
+         }
+
+         .nav-icon {
+            display: block;
+            height: 80px;
+            width: 80px;
+            margin: 8px auto 3px auto;
+            background-image: url(images/icons.png);
+            background-repeat: no-repeat;
+         }
+         .nav-icon.portfolio { background-position-x: -80px; }
+         .nav-icon.blog { background-position-x: -160px; }
+
+         .nav-label {
+            padding-bottom: 2px;
+            color: #0f3535;
+            font-weight: 500;
+            font-size: 1.3em;
+         }
