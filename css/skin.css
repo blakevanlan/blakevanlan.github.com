@@ -60,6 +60,29 @@ body {
    font-weight: 300;
 }
 
+/* General classes */
+.main-banner {
+   width: 100%;
+   background-color: #1b676b;
+   padding-top: 10px;
+   height: 110px;
+}
+.main-banner h1 {
+   width: 978px;
+   margin: 0 auto 0 auto;  
+   font-size: 4.1em;
+   font-weight: 600;
+   color: #fff;
+}
+.main-banner h2 {
+   width: 978px;
+   margin: 0 auto 0px auto;  
+   font-size: 1.6em;
+   font-weight: 500;
+   color: #fff;
+}
+
+/* Structural */
 #header {
    width: 978px;
    margin: 0 auto 10px auto;  

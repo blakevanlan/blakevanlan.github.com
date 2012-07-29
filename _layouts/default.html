@@ -23,15 +23,15 @@
 <body>
    <div id="header">
        <div id="nav">
-         <a href="/" class="nav-item active">
+         <a href="/" class="nav-item {% if page.url == '/index.html' %}active{% endif %}">
             <span class="nav-icon home"></span>
             <span class="nav-label">home</span>
          </a>
-          <a href="/portfolio" class="nav-item">
+          <a href="/portfolio" class="nav-item {% if page.url == '/portfolio.html' %}active{% endif %}">
             <span class="nav-icon portfolio"></span>
             <span class="nav-label">portfolio</span>
          </a>
-         <a href="/blog" class="nav-item">
+         <a href="/blog" class="nav-item {% if page.url == '/blog.html' %}active{% endif %}">
             <span class="nav-icon blog"></span>
             <span class="nav-label">blog</span>
          </a>
