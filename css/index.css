@@ -1,0 +1,39 @@
+#brain-wrap {
+   width: 978px;
+   height: 400px;
+   margin: 0 auto;
+}
+
+#brain {
+   float: left;
+   width: 658px;
+   height: 400px;
+   background: url(images/brain.png) no-repeat 50% 0;
+}
+
+.brain-info {
+   float: left;
+   width: 160px;
+   height: 400px;
+   font-weight: 600;
+   text-align: center;
+   font-size: 3em;
+}
+
+.brain-percent {
+   display: block;
+   margin: 120px 0 4px 0;
+   width: 160px;
+   height: 160px;
+   -webkit-border-radius: 160px;
+   -moz-border-radius: 160px;
+   border-radius: 160px;
+   vertical-align: middle;
+   line-height: 160px;
+   color: #fff;
+}
+
+.brain-percent.designer { background-color: #f07e13; }
+.brain-percent.coder { background-color: #98b813; }
+
+.brain-text { color: #1b676b; }

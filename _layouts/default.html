@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <!--[if IE]><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script><![endif]-->
+   
+   <link href='http://fonts.googleapis.com/css?family=Dosis:300,500,600' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="css/skin.css" media="screen"/>
+   <link rel="stylesheet" href="css/index.css" media="screen"/>
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   <script type="text/javascript" src="js/script.js"></script>
+
+   <title>{% if page.title %} {{ page.title }} | {% endif %} Blake VanLandingham</title>
+   <meta name="description" content="Portfolio for Blake VanLandingham">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+   <div id="header">
+       <div id="nav">
+         <a href="/" class="nav-item active">
+            <span class="nav-icon home"></span>
+            <span class="nav-label">home</span>
+         </a>
+          <a href="/portfolio" class="nav-item">
+            <span class="nav-icon portfolio"></span>
+            <span class="nav-label">portfolio</span>
+         </a>
+         <a href="/blog" class="nav-item">
+            <span class="nav-icon blog"></span>
+            <span class="nav-label">blog</span>
+         </a>
+      </div>
+      <a id="logo-wrap" href="/">
+         <img id="logo" src="css/images/logo.png" width="166px" height="170px" />
+      </a>
+   </div>
+
+   {{ content }}
+
+   <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   </script>
+   <script type="text/javascript">
+      try {
+         var pageTracker = _gat._getTracker("UA-33669676-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
+   </script>
+</body>
+</html>
