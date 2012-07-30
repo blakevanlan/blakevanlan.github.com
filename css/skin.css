@@ -96,49 +96,38 @@ body {
 
    #nav {
       float: right;
-      margin: 20px 0;
    }
 
       .nav-item {
          display: block;
          float: left;
-         width: 130px;
-         height: 130px;
+         width: 70px;
+         height: 80px;
 
          text-align: center;
          text-decoration: none;
-         -webkit-border-radius: 130px;
-         -moz-border-radius: 130px;
-         border-radius: 130px;
       }
          .nav-item:hover .nav-label {
-            border-bottom: #0f3535 solid 2px;            
-         }
-         .nav-item.active {
-            color: #fff; 
-            background-color: #f07e13;            
+            border-bottom: #0f3535 solid 1px;            
          }
          .nav-item.active .nav-label {
-            color: #fff; 
-         }
-         .nav-item.active:hover .nav-label {
-            border-bottom: #fff solid 2px;  
+            border-bottom: #0f3535 double 3px;  
          }
 
          .nav-icon {
             display: block;
-            height: 80px;
-            width: 80px;
+            height: 50px;
+            width: 50px;
             margin: 8px auto 3px auto;
             background-image: url(images/icons.png);
             background-repeat: no-repeat;
          }
-         .nav-icon.portfolio { background-position-x: -80px; }
-         .nav-icon.blog { background-position-x: -160px; }
+         .nav-icon.portfolio { background-position-x: -50px; }
+         .nav-icon.blog { background-position-x: -100px; }
 
          .nav-label {
             padding-bottom: 2px;
             color: #0f3535;
             font-weight: 500;
-            font-size: 1.3em;
+            font-size: 1em;
          }
