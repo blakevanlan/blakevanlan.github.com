@@ -21,37 +21,43 @@
 </head>
 
 <body>
-   <div id="header" class="section">
-      <div class="content container">
-         <a id="logo-wrap" href="/">
-            <img id="logo" src="css/images/logo.png" width="166px" height="170px" />
-         </a>
-          <div id="nav">
-            <a href="/" class="nav-item {% if page.url == '/index.html' %}active{% endif %}">
-               <span class="nav-icon home"></span>
-               <span class="nav-label">home</span>
+   <div id="header">
+      <div class="content section">
+         <div class="container">
+            <a id="logo-wrap" href="/">
+               <img id="logo" src="css/images/logo.png" width="166px" height="170px" />
             </a>
-             <a href="/portfolio" class="nav-item {% if page.url == '/portfolio.html' %}active{% endif %}">
-               <span class="nav-icon portfolio"></span>
-               <span class="nav-label">portfolio</span>
-            </a>
-            <a href="/blog" class="nav-item {% if page.url == '/blog.html' %}active{% endif %}">
-               <span class="nav-icon blog"></span>
-               <span class="nav-label">blog</span>
-            </a>
+             <div id="nav">
+               <a href="/" class="nav-item {% if page.url == '/index.html' %}active{% endif %}">
+                  <span class="nav-icon home"></span>
+                  <span class="nav-label">home</span>
+               </a>
+                <a href="/portfolio" class="nav-item {% if page.url == '/portfolio.html' %}active{% endif %}">
+                  <span class="nav-icon portfolio"></span>
+                  <span class="nav-label">portfolio</span>
+               </a>
+               <a href="/blog" class="nav-item {% if page.url == '/blog.html' %}active{% endif %}">
+                  <span class="nav-icon blog"></span>
+                  <span class="nav-label">blog</span>
+               </a>
+            </div>
          </div>
       </div>
 
-      {% if page.isHome %} 
-         <div id="brain-wrap">
-            <div class="brain-info">
-               <span class="brain-percent designer">30%</span>
-               <span class="brain-text">designer</span>
-            </div>
-            <div id="brain"></div>
-            <div class="brain-info">
-               <span class="brain-percent coder">70%</span>
-               <span class="brain-text">coder</span>
+      {% if page.isHome %}
+         <div class="content section">
+            <div class="container">
+               <div id="brain-wrap">
+                  <div id="brain"></div>
+                  <div class="brain-info left">
+                     <span class="brain-percent designer">30%</span>
+                     <span class="brain-text">designer</span>
+                  </div>
+                  <div class="brain-info right">
+                     <span class="brain-percent coder">70%</span>
+                     <span class="brain-text">coder</span>
+                  </div>
+               </div>
             </div>
          </div>
       {% endif %}

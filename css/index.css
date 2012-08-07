@@ -1,14 +1,23 @@
-#brain-wrap {
-   width: 978px;
+#brain-wrap, #brain, .brain-info {
    height: 400px;
+   transition: height 500ms;
+   -moz-transition: height 500ms; /* Firefox 4 */
+   -webkit-transition: height 500ms; /* Safari and Chrome */
+   -o-transition: height 500ms; /* Opera */
+}
+
+#brain-wrap {
+   position: relative;
    margin: 0 auto 75px auto;
 }
 
 #brain {
-   float: left;
-   width: 658px;
-   height: 400px;
-   background: url(images/brain.png) no-repeat 50% 0;
+   position: absolute;
+   width: auto;
+   top: 20px;
+   right: 180px;
+   left: 180px;
+   background: url(images/brain.png) no-repeat 50% 50%;
    -webkit-background-size: contain;
    -moz-background-size: contain;
    -o-background-size: contain;
@@ -16,16 +25,22 @@
 }
 
 .brain-info {
-   float: left;
    width: 160px;
-   height: 400px;
    font-weight: 600;
    text-align: center;
    font-size: 3em;
 }
 
+.brain-info.left {
+   float: left;
+}
+
+.brain-info.right {
+   float: right;
+}
+
 .brain-percent {
-   display: block;
+   display: inline-block;
    margin: 120px 0 4px 0;
    width: 160px;
    height: 160px;
@@ -35,9 +50,84 @@
    vertical-align: middle;
    line-height: 160px;
    color: #fff;
+
+   transition: margin, height, width 500ms;
+   -moz-transition: margin, height, width 500ms;
+   -webkit-transition: margin, height, width 500ms;
+   -o-transition: margin, height, width 500ms;
 }
 
 .brain-percent.designer { background-color: #f07e13; }
 .brain-percent.coder { background-color: #98b813; }
 
 .brain-text { color: #1b676b; }
+
+@media (max-width: 850px) {
+   #brain-wrap, #brain, .brain-info {
+      height: 300px;
+   }
+   .brain-percent {
+      margin-top: 98px;
+   }
+}
+
+@media (max-width: 750px) {
+   #brain-wrap, #brain, .brain-info {
+      height: 270px;
+   }
+   .brain-percent {
+      margin-top: 75px;
+   }
+}
+
+@media (max-width: 650px) {
+   #brain-wrap, #brain, .brain-info {
+      height: 240px;
+   }
+   .brain-percent {
+      margin-top: 65px;
+   }
+}
+
+@media (max-width: 600px) {
+   #brain-wrap {
+      text-align: center;
+      margin-bottom: 14px;
+   }
+   #brain-wrap, .brain-info {
+      height: auto;
+   }
+   #brain {
+      position: static;
+      height: 310px;
+   }
+   .brain-info.left, .brain-info.right {
+      display: inline-block;
+      float: none;
+      
+   }
+   .brain-info.left {
+      margin: 8px 8px 8px 0;
+   }
+   .brain-info.right {
+      margin: 8px 0 8px 8px;
+   }
+   .brain-percent {
+      margin-top: 10px;
+   }
+}
+
+@media (max-width: 404px) {
+   #brain {
+      height: 285px;
+   }
+   .brain-info {
+      font-size: 2.25em;
+      width: 125px;
+   }
+   .brain-percent {
+      width: 125px;
+      height: 125px;
+      line-height: 125px
+   }
+}
