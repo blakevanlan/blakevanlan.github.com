@@ -55,52 +55,81 @@ table {
 
 /* Style */
 body {
-   background: #fff url(images/brick-bg-seamless-small.jpg) 50% 0;
+   background-color: #fff;
    font-family: 'Dosis', 'Arial', sans-serif;
    font-weight: 300;
 }
 
 /* General classes */
+.green {
+   color: #98B813;
+}
+
+.orange {
+   color: #f07e13;
+}
+
+.content {
+   min-width: 320px;
+   max-width: 978px;
+   margin: 0 auto 0 auto;
+}
+
+.section {
+   padding-top: 12px;
+   padding-bottom: 12px;
+}
+
+.container {
+   padding-left: 12px;
+   padding-right: 12px;
+}
+
+.container.divider {
+   -webkit-box-shadow: inset 0px px 10px -5px rgba(0, 0, 0, .6);
+   box-shadow: inset 0px px 10px -5px rgba(0, 0, 0, .6);
+}
+
 .main-banner {
    width: 100%;
    background-color: #1b676b;
-   padding-top: 10px;
-   height: 110px;
 }
 .main-banner h1 {
-   width: 978px;
-   margin: 0 auto 0 auto;  
    font-size: 4.1em;
    font-weight: 600;
    color: #fff;
 }
 .main-banner h2 {
-   width: 978px;
-   margin: 0 auto 0px auto;  
    font-size: 1.6em;
    font-weight: 500;
    color: #fff;
+   padding-bottom: 0.25em;
 }
 
 /* Structural */
 #header {
-   width: 978px;
-   margin: 0 auto 10px auto;  
+   position: relative;
+   background: #fff url(images/brick-bg-seamless-small.jpg) 50% 0;
 }
+
+   #header .content {
+      position: relative;
+   }
 
    #logo {
       width: 166px;
       height: 170px;
-      margin-top: 2px;
+      margin-top: 5px;
    }
 
    #nav {
-      float: right;
+      position: absolute;
+      top: 12px;
+      right: 12px;
    }
 
       .nav-item {
-         display: block;
-         float: left;
+         display: inline-block;
          width: 70px;
          height: 80px;
 
@@ -131,3 +160,14 @@ body {
             font-weight: 500;
             font-size: 1em;
          }
+
+@media (max-width: 450px) {
+   #header {
+      text-align: center;
+   }
+
+   #nav {
+      position: static;
+      float: none;
+   }
+}

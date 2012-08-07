@@ -9,6 +9,10 @@
    width: 658px;
    height: 400px;
    background: url(images/brain.png) no-repeat 50% 0;
+   -webkit-background-size: contain;
+   -moz-background-size: contain;
+   -o-background-size: contain;
+   background-size: contain;
 }
 
 .brain-info {
