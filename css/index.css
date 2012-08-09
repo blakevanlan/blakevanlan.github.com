@@ -1,3 +1,5 @@
+
+/* Brain Section */
 #brain-wrap, #brain, .brain-info {
    height: 400px;
    transition: height 500ms;
@@ -8,7 +10,7 @@
 
 #brain-wrap {
    position: relative;
-   margin: 0 auto 75px auto;
+   margin: 0 auto 60px auto;
 }
 
 #brain {
@@ -119,7 +121,7 @@
 
 @media (max-width: 404px) {
    #brain {
-      height: 285px;
+      height: 225px;
    }
    .brain-info {
       font-size: 2.25em;
@@ -130,4 +132,9 @@
       height: 125px;
       line-height: 125px
    }
+}
+
+/* Content Section */
+.bio {
+   margin-right: 312px;
 }
