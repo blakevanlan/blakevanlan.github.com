@@ -68,7 +68,7 @@ h1 {
    font-size: 2em;
    font-weight: 600;
    color: rgba(27,103,107, 0.8);
-   text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+   text-shadow: 1px 4px 6px #e8e8e8, 0 0 0 #000, 1px 4px 6px #e8e8e8;
    padding: 12px;
 }
 
