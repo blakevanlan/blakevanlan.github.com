@@ -60,6 +60,18 @@ body {
    font-weight: 300;
 }
 
+/* Elements */
+h1 {
+   background: #e8e8e8 url(images/gray-noise.jpg) repeat;
+   -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
+   box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
+   font-size: 2em;
+   font-weight: 600;
+   color: rgba(27,103,107, 0.8);
+   text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+   padding: 12px;
+}
+
 /* General classes */
 .green {
    color: #98B813;
@@ -103,6 +115,26 @@ body {
    background-color: #1b676b;
    -webkit-box-shadow: 0 0 6px 2px rgba(0, 0, 0, .6);
    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .6);
+   position: relative;
+}
+.main-banner .highlight {
+   -webkit-box-shadow: inset 0 9px 16px -5px rgba(255, 255, 255, .4);
+   box-shadow: inset 0 9px 16px -5px rgba(255, 255, 255, .4);
+   position: absolute;
+   left: -20px;
+   right: -20px;
+   top: 0px;
+   height: 15px;
+}
+.main-banner h1, .main-banner h2 {
+   padding: 0;
+   background: transparent;
+   box-shadow: none;
+   text-shadow: none;
+   transition: all 500ms;
+   -moz-transition: all 500ms;
+   -webkit-transition: all 500ms;
+   -o-transition: all 500ms;
 }
 .main-banner h1 {
    font-size: 4.1em;
@@ -115,12 +147,6 @@ body {
    color: #fff;
    padding-top: .25em;
    padding-bottom: 0.25em;
-}
-.main-banner h1, .main-banner h2 {
-   transition: font-size 500ms;
-   -moz-transition: font-size 500ms;
-   -webkit-transition: font-size 500ms;
-   -o-transition: font-size 500ms;
 }
 
 .clear {
@@ -202,11 +228,23 @@ body {
          }
 
 .sidebar {
-   background: #e8e8e8 url(images/gray-noise.jpg) repeat;
+   /*background: #7D7D7D url(images/gray-noise.jpg) repeat;*/
+   background: #7D7D7D;
    float: right;
-   -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
+   /*-webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);*/
    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
-   width: 300px;
+   width: 264px;
+}
+
+.sidebar h1 {
+   padding: 0 0 .25em 0;
+   box-shadow: none;
+   background: transparent;
+   color: rgba(152,184,19, 0.8);
+   text-shadow: 1px 1px 10px rgba(0,0,0,.6);
+   border-bottom: 1px solid #999;
+
+   /*color: rgba(240,126,19, 0.8);*/
 }
 
 @media (max-width: 450px) {
@@ -219,3 +257,6 @@ body {
       float: none;
    }
 }
+
+::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+::selection { background: #5af; color: #fff; text-shadow: none; }​

@@ -2,10 +2,10 @@
 /* Brain Section */
 #brain-wrap, #brain, .brain-info {
    height: 400px;
-   transition: height 500ms;
-   -moz-transition: height 500ms; /* Firefox 4 */
-   -webkit-transition: height 500ms; /* Safari and Chrome */
-   -o-transition: height 500ms; /* Opera */
+   transition: all 500ms;
+   -moz-transition: all 500ms; /* Firefox 4 */
+   -webkit-transition: all 500ms; /* Safari and Chrome */
+   -o-transition: all 500ms; /* Opera */
 }
 
 #brain-wrap {
@@ -53,10 +53,10 @@
    line-height: 160px;
    color: #fff;
 
-   transition: margin, height, width 500ms;
-   -moz-transition: margin, height, width 500ms;
-   -webkit-transition: margin, height, width 500ms;
-   -o-transition: margin, height, width 500ms;
+   transition: all 500ms;
+   -moz-transition: all 500ms;
+   -webkit-transition: all 500ms;
+   -o-transition: all 500ms;
 }
 
 .brain-percent.designer { background-color: #f07e13; }
@@ -131,6 +131,12 @@
       width: 125px;
       height: 125px;
       line-height: 125px
+   }
+}
+
+@media (max-width: 380px) {
+   .main-banner h2 {
+      padding-top: .75em;
    }
 }
 
