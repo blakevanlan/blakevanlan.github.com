@@ -52,13 +52,18 @@ table {
 
 /* Style */
 body {
+   color: #2E2E2E;
    background-color: #fff;
-   font-family: 'Dosis', 'Arial', sans-serif;
+   font-family: 'Nuito', 'Arial', sans-serif;
    font-weight: 300;
    line-height: 1;
 }
 
 /* Elements */
+h1, h2, h3, h4, h5, h6 {
+   color: #595959;
+   font-family: 'Dosis', 'Arial', sans-serif;
+}
 h1 {
    background: #e8e8e8 url(images/gray-noise.jpg) repeat;
    -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
@@ -71,15 +76,29 @@ h1 {
    margin-top: 12px;
    margin-bottom: 12px;
 }
+h2 {
+   font-size: 1.5em;
+   margin-top: 20px;
+}
+h3 {
+   font-size: 1.2em;
+   margin-top: 16px;
+}
+h4 {
+   font-size: 1em;
+   margin-top: 12px;
+}
 
 p {
+   color: #2E2E2E;
    margin: 12px 0;
-   font-size: 1.05em;
+   font-size: .9em;
    font-weight: 300;
+   line-height: 1.5em;
 }
 
 strong {
-   font-weight: 500;
+   font-weight: bold;
 }
 
 em {
@@ -128,7 +147,7 @@ em {
    overflow: hidden;
 }
 .main-banner .highlight {
-   -webkit-box-shadow: inset 0 8px 20px -6px rgba(255, 255, 255, .4)
+   -webkit-box-shadow: inset 0 8px 20px -6px rgba(255, 255, 255, .4);
    box-shadow: inset 0 8px 20px -6px rgba(255, 255, 255, .4);
    position: absolute;
    left: -20px;

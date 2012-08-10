@@ -20,10 +20,10 @@ isHome: true
             <h1>twitter feed</h1>
          </div>
          <div id="primary">
-            <h1 class="standard">who is this?</h1>
-            <p>
-               Hey this is some markdown. Make is all <strong>cool</strong> and <em>stuff</em>
-            </p>
+            {% capture home_content %}
+               {% include home_content.md %}
+            {% endcapture %}
+            {{ home_content | unindent | markdownify }}
          </div>
       </div>
    </div>
