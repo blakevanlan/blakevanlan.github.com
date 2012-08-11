@@ -27,6 +27,7 @@
 }
 
 .brain-info {
+   font-family: 'Dosis', 'Arial', sans-serif;
    width: 160px;
    font-weight: 600;
    text-align: center;
@@ -141,4 +142,27 @@
 }
 
 /* Content Section */
+#intro .image-wrap {
+   float: right;
+   margin: 0 0 6px 6px;
+   padding: 9px 9px 9px 15px;
+   width: 50%;
+}
 
+#intro img {
+   width: 100%;
+}
+
+@media (max-width: 580px) {
+   #intro .image-wrap {
+      float: none;
+      padding: 0 9px 0 0;
+      margin: 12px 0;
+      width: auto;
+      text-align: center;
+   }
+
+   #intro img {
+      width: 100%;
+   }
+}

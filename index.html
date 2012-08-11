@@ -15,15 +15,19 @@ isHome: true
 
 <div>
    <div class="content section margin">
-      <div class="container">
+      <div class="container text">
+         <div id="intro">
+            {% capture home_intro %}
+               {% include home_intro.md %}
+            {% endcapture %}
+            {{ home_intro | unindent | markdownify }}
+            <div class="clear section"></div>
+         </div>
          <div id="sidebar" class="section container">
             <h1>twitter feed</h1>
          </div>
          <div id="primary">
-            {% capture home_content %}
-               {% include home_content.md %}
-            {% endcapture %}
-            {{ home_content | unindent | markdownify }}
+            
          </div>
       </div>
    </div>

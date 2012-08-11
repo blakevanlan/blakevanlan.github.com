@@ -1,6 +1,9 @@
 /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
     License: none (public domain)
+
+   Hello fellow web lovers!
+   I have left everything unminified/compressed so you can judge my CSS/JS abilities.
 */
 
 html, body, div, span, applet, object, iframe,
@@ -92,9 +95,9 @@ h4 {
 p {
    color: #2E2E2E;
    margin: 12px 0;
-   font-size: .9em;
+   /*font-size: .9em;*/
    font-weight: 300;
-   line-height: 1.5em;
+   line-height: 1.6em;
 }
 
 strong {
@@ -103,6 +106,14 @@ strong {
 
 em {
    font-style: italic;
+}
+
+@media(min-width: 980px) {
+   h1 { font-size: 2.2em; }
+   h2 { font-size: 1.7em; }
+   h3 { font-size: 1.5em; }
+   h4 { font-size: 1.2em; }
+   p { font-size: 1em; }
 }
 
 /* General classes */
@@ -116,7 +127,7 @@ em {
 
 .content {
    min-width: 300px;
-   max-width: 978px;
+   max-width: 1100px;
    margin: 0 auto 0 auto;
 }
 
@@ -177,6 +188,13 @@ em {
    color: #fff;
    padding-top: .25em;
    padding-bottom: 0.25em;
+}
+
+.text img {
+   padding: 3px;
+   border: 1px solid #DEDEDE;
+   -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 3px 0 10px -2px rgba(255, 255, 255, .7);
+   box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 3px 0 10px -2px rgba(255, 255, 255, .7);
 }
 
 .clear {
@@ -258,8 +276,7 @@ em {
          }
 
 #sidebar {
-   /*background: #7D7D7D url(images/gray-noise.jpg) repeat;*/
-   background: #7D7D7D;
+   background: #7D7D7D url(images/darkgray-noise.jpg) repeat;
    float: right;
    -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
