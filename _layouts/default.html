@@ -7,65 +7,87 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
    <!--[if IE]><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script><![endif]-->
    
-   <link href='http://fonts.googleapis.com/css?family=Nuito:300|Dosis:300,500,600' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Nunito:300|Dosis:300,500,600' rel='stylesheet' type='text/css'>
 
    <link rel="stylesheet" href="css/skin.css" media="screen"/>
    <link rel="stylesheet" href="css/index.css" media="screen"/>
 
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-   <script type="text/javascript" src="js/script.js"></script>
+   <script type="text/javascript" src="/js/script.js"></script>
 
    <title>{% if page.title %} {{ page.title }} | {% endif %} Blake VanLandingham</title>
    <meta name="description" content="Portfolio for Blake VanLandingham">
-   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-   <div id="header">
-      <div class="content section">
-         <div class="container">
-            <a id="logo-wrap" href="/">
-               <img id="logo" src="css/images/logo.png" width="166px" height="170px" />
-            </a>
-             <div id="nav">
-               <a href="/" class="nav-item {% if page.url == '/index.html' %}active{% endif %}">
-                  <span class="nav-icon home"></span>
-                  <span class="nav-label">home</span>
-               </a>
-                <a href="/portfolio" class="nav-item {% if page.url == '/portfolio.html' %}active{% endif %}">
-                  <span class="nav-icon portfolio"></span>
-                  <span class="nav-label">portfolio</span>
-               </a>
-               <a href="/blog" class="nav-item {% if page.url == '/blog.html' %}active{% endif %}">
-                  <span class="nav-icon blog"></span>
-                  <span class="nav-label">blog</span>
-               </a>
-            </div>
-         </div>
-      </div>
-
-      {% if page.isHome %}
+   <div id="bg">
+      <div id="header">
          <div class="content section">
             <div class="container">
-               <div id="brain-wrap">
-                  <div id="brain"></div>
-                  <div class="brain-info left">
-                     <span class="brain-percent designer">30%</span>
-                     <span class="brain-text">designer</span>
-                  </div>
-                  <div class="brain-info right">
-                     <span class="brain-percent coder">70%</span>
-                     <span class="brain-text">coder</span>
-                  </div>
-                  <div class="clear"></div>
+               <a id="logo-wrap" href="/">
+                  <img id="logo" src="css/images/logo.png" width="166px" height="170px" />
+               </a>
+                <div id="nav">
+                  <a href="/" class="nav-item {% if page.url == '/index.html' %}active{% endif %}">
+                     <span class="nav-icon home"></span>
+                     <span class="nav-label">home</span>
+                  </a>
+                   <a href="/portfolio" class="nav-item {% if page.url == '/portfolio.html' %}active{% endif %}">
+                     <span class="nav-icon portfolio"></span>
+                     <span class="nav-label">portfolio</span>
+                  </a>
+                  <a href="/blog" class="nav-item {% if page.url == '/blog.html' %}active{% endif %}">
+                     <span class="nav-icon blog"></span>
+                     <span class="nav-label">blog</span>
+                  </a>
                </div>
             </div>
          </div>
-      {% endif %}
+
+         {% if page.isHome %}
+            <div class="content section">
+               <div class="container">
+                  <div id="brain-wrap">
+                     <div id="brain"></div>
+                     <div class="brain-info left">
+                        <span class="brain-percent designer">30%</span>
+                        <span class="brain-text">designer</span>
+                     </div>
+                     <div class="brain-info right">
+                        <span class="brain-percent coder">70%</span>
+                        <span class="brain-text">coder</span>
+                     </div>
+                     <div class="clear"></div>
+                  </div>
+               </div>
+            </div>
+         {% endif %}
+
+      </div>
+
+      {{ content }}
 
    </div>
 
-   {{ content }}
+   <div id="footer">
+      <div class="content">
+         <div class="container">
+            <span class="links">
+               <span class="link"><a href="/portfolio.html">home</a></span>
+               <span class="bullet">&bull;</span>
+               <span class="link"><a class="email-text">contact: blakevanlan at gmail dot com</a></span>
+               <span class="bullet">&bull;</span>
+               <span class="link"><a href="/portfolio.html">portfolio</a></span>
+               <span class="bullet">&bull;</span>
+               <span class="link"><a href="/blog.html">blog</a></span>
+            </span>
+            <span class="copyright">
+               Copyright &copy; 2012 Blake VanLandingham, All Rights Reserved.
+            </span>
+         </div>
+      </div>
+   </div>
 
    <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

@@ -153,6 +153,39 @@
    width: 100%;
 }
 
+.toolbox {
+   position: relative;
+   background: #fff;
+   background: -moz-radial-gradient(center, ellipse contain, #EAEAEA 0%, #ffffff 100%); /* FF3.6+ */
+   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#EAEAEA), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+   background: -webkit-radial-gradient(center, ellipse contain, #EAEAEA 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-radial-gradient(center, ellipse contain, #EAEAEA 0%,#ffffff 100%); /* Opera 12+ */
+   background: -ms-radial-gradient(center, ellipse contain, #EAEAEA 0%,#ffffff 100%); /* IE10+ */
+   background: radial-gradient(ellipse at center, #EAEAEA 0%,#ffffff 100%); /* W3C */
+}
+
+.tool {
+   width: 25%;
+   float: left;
+}
+
+.tool a {
+   padding: 6px 8px;
+   display: block;
+}
+
+.tool img {
+   padding: 0;
+   width: 100%;
+   border: 1px solid #DEDEDE;
+   -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 3px 0 10px -2px rgba(255, 255, 255, .7);
+   box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 3px 0 10px -2px rgba(255, 255, 255, .7);
+}
+
+@media (max-width: 620px) {
+   .tool { width: 33.33%; }
+}
+
 @media (max-width: 580px) {
    #intro .image-wrap {
       float: none;
@@ -166,3 +199,12 @@
       width: 100%;
    }
 }
+
+@media (max-width: 460px) {
+   .tool { width: 50%; }
+}
+
+@media (max-width: 355px) {
+   .contact .email-text { display: block; }
+}
+
