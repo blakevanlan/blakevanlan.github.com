@@ -21,13 +21,16 @@ isHome: true
                {% include home_intro.md %}
             {% endcapture %}
             {{ home_intro | unindent | markdownify }}
-            <div class="clear section"></div>
+            <div class="clear"></div>
          </div>
-         <div id="sidebar" class="section container">
+         <div id="sidebar" class="section margin container">
             <h1>twitter feed</h1>
          </div>
          <div id="primary">
-            
+            {% capture home_interest %}
+               {% include home_interest.md %}
+            {% endcapture %}
+            {{ home_interest | unindent | markdownify }}
          </div>
       </div>
    </div>

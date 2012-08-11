@@ -7,7 +7,7 @@
 </div>
 
 ## The introduction
-My name is **Blake VanLandingham** (hopefully that's obvious) and I'm from Overland Park, KS. I'm just a fun loving guy who truly enjoys quality. _Quality_ photography. **Quality** design. **Quality** websites. My focus is front end development and usability. I love writing software that helps simplify our complex lives.
+My name is **Blake VanLandingham** (hopefully that's obvious) and I'm from Overland Park, KS. I'm just a fun loving guy who truly enjoys quality. **Quality** photography. **Quality** design. **Quality** websites. My focus is front end development and usability. I love writing software that helps simplify our complex lives.
 
 ## A little background
 
