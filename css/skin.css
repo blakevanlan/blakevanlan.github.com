@@ -101,6 +101,16 @@ p {
    line-height: 1.6em;
 }
 
+a {
+   color: #1e7175;
+}
+a:visited {
+   color: #5d700c;
+}
+a:hover, a:active {
+   color: #269aa0;
+}
+
 strong {
    font-weight: bold;
 }
@@ -227,7 +237,7 @@ em {
 
 #header {
    position: relative;
-   background: #fff url(images/brick-bg-seamless-small.jpg) 50% 0;
+   background: #fff url(images/brick-bg-seamless-small.jpg) 0 0;
 }
 
    #header .content {
