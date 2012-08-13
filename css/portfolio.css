@@ -1,0 +1,48 @@
+.exhibits .divider {
+   height: 1px;
+   margin: 12px 0;
+   background-color: #ddd;
+}
+
+.exhibit .image-wrap {
+   display: block;
+   float: right;
+   margin: 0 0 6px 6px;
+   padding: 9px 9px 9px 15px;
+   width: 50%;
+}
+
+.exhibit .image-wrap img {
+   width: 100%;
+}
+
+.exhibit .info {}
+
+.exhibit h2 {
+   font-size: 2.1em;
+   padding-top: 40px;
+}
+
+.exhibit h3 {
+   padding-bottom: .2em;
+}
+
+.exhibit .website, .exhibit .date {
+   display: block;
+   padding-top: .5em;
+   font-size: .9em;
+}
+
+@media (max-width: 620px) {
+   .exhibit h2 { font-size: 1.7em }
+}
+@media (max-width: 580px) {
+   .exhibit .image-wrap {
+      float: none;
+      padding: 0 9px 0 0;
+      margin: 12px 0;
+      width: auto;
+      text-align: center;
+   }
+   .exhibit h2 { padding-top: 0; }
+}

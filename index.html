@@ -13,177 +13,159 @@ isHome: true
    </div>
 </div>
 
-<div>
-   <div class="content section margin">
-      <div class="container text">
-         <div id="intro">
-            {% capture home_intro %}
-               {% include home_intro.md %}
-            {% endcapture %}
-            {{ home_intro | unindent | markdownify }}
-            <div class="clear"></div>
-         </div>
-         <h1>the toolbox</h1>
-         <div class="toolbox">
-            <div class="tool">
-               <a href="http://jquery.com/">
-                  <img src="/images/home/tool-jquery.jpg" title="jQuery" alt="jQuery" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">jQuery</span>
-                        <span class="rating">Advanced</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://nodejs.org/">
-                  <img src="/images/home/tool-nodejs.jpg" title="Node.js" alt="Node.js" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">Node.js</span>
-                        <span class="rating">Advanced</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://coffeescript.org/">
-                  <img src="/images/home/tool-coffeescript.jpg" title="CoffeeScript" alt="CoffeeScript" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">CoffeeScript</span>
-                        <span class="rating">Advanced</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://expressjs.com/">
-                  <img src="/images/home/tool-expressjs.jpg" title="express.js" alt="express.js" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">express.js</span>
-                        <span class="rating">Advanced</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://msdn.microsoft.com/en-us/vstudio/hh388566.aspx">
-                  <img src="/images/home/tool-csharp.jpg" title="C#" alt="C#" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">C#</span>
-                        <span class="rating">Advanced</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://wordpress.org/">
-                  <img src="/images/home/tool-wordpress.jpg" title="WordPress" alt="WordPress" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">C#</span>
-                        <span class="rating knowledgeable">Knowledgeable</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star gray"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://www.dotnetnuke.com/">
-                  <img src="/images/home/tool-dotnetnuke.jpg" title="DotNetNuke" alt="DotNetNuke" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">C#</span>
-                        <span class="rating knowledgeable">Knowledgeable</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star gray"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://www.mysql.com/">
-                  <img src="/images/home/tool-mysql.jpg" title="MySQL" alt="MySQL" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">MySQL</span>
-                        <span class="rating knowledgeable">Knowledgeable</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star gray"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://lucene.apache.org/solr/">
-                  <img src="/images/home/tool-solr.jpg" title="Solr" alt="Solr" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">Solr</span>
-                        <span class="rating new">Newly Acquired</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star blue"></span>
-                           <span class="star gray"></span>
-                           <span class="star gray"></span>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://www.mongodb.org/">
-                  <img src="/images/home/tool-mongo.jpg" title="Mongo DB" alt="Mongo DB" />
-                  <span class="knowledge">
+<div class="content section margin">
+   <div class="container text">
+      <div id="intro">
+         {% capture home_intro %}
+            {% include home_intro.md %}
+         {% endcapture %}
+         {{ home_intro | unindent | markdownify }}
+         <div class="clear"></div>
+      </div>
+      <h1>the toolbox</h1>
+      <div class="toolbox">
+         <div class="tool">
+            <a href="http://jquery.com/">
+               <img src="/images/home/tool-jquery.jpg" title="jQuery" alt="jQuery" />
+               <span class="knowledge">
                   <span class="inner">
-                     <span class="tech">mongo DB</span>
+                     <span class="tech">jQuery</span>
+                     <span class="rating">Advanced</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://nodejs.org/">
+               <img src="/images/home/tool-nodejs.jpg" title="Node.js" alt="Node.js" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">Node.js</span>
+                     <span class="rating">Advanced</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://coffeescript.org/">
+               <img src="/images/home/tool-coffeescript.jpg" title="CoffeeScript" alt="CoffeeScript" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">CoffeeScript</span>
+                     <span class="rating">Advanced</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://expressjs.com/">
+               <img src="/images/home/tool-expressjs.jpg" title="express.js" alt="express.js" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">express.js</span>
+                     <span class="rating">Advanced</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://msdn.microsoft.com/en-us/vstudio/hh388566.aspx">
+               <img src="/images/home/tool-csharp.jpg" title="C#" alt="C#" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">C#</span>
+                     <span class="rating">Advanced</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://wordpress.org/">
+               <img src="/images/home/tool-wordpress.jpg" title="WordPress" alt="WordPress" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">WordPress</span>
+                     <span class="rating knowledgeable">Knowledgeable</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star gray"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://www.dotnetnuke.com/">
+               <img src="/images/home/tool-dotnetnuke.jpg" title="DotNetNuke" alt="DotNetNuke" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">DotNetNuke</span>
+                     <span class="rating knowledgeable">Knowledgeable</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star gray"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://www.mysql.com/">
+               <img src="/images/home/tool-mysql.jpg" title="MySQL" alt="MySQL" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">MySQL</span>
+                     <span class="rating knowledgeable">Knowledgeable</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star blue"></span>
+                        <span class="star gray"></span>
+                     </span>
+                  </span>
+               </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://lucene.apache.org/solr/">
+               <img src="/images/home/tool-solr.jpg" title="Solr" alt="Solr" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">Solr</span>
                      <span class="rating new">Newly Acquired</span>
                      <span class="stars">
                         <span class="star blue"></span>
@@ -193,28 +175,43 @@ isHome: true
                      </span>
                   </span>
                </span>
-               </a>
-            </div>
-            <div class="tool">
-               <a href="http://golang.org/">
-                  <img src="/images/home/tool-go.jpg" title="Google Go" alt="Google Go" />
-                  <span class="knowledge">
-                     <span class="inner">
-                        <span class="tech">Google Go</span>
-                        <span class="rating">Novice</span>
-                        <span class="stars">
-                           <span class="star blue"></span>
-                           <span class="star gray"></span>
-                           <span class="star gray"></span>
-                           <span class="star gray"></span>
-                        </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://www.mongodb.org/">
+               <img src="/images/home/tool-mongo.jpg" title="Mongo DB" alt="Mongo DB" />
+               <span class="knowledge">
+               <span class="inner">
+                  <span class="tech">mongo DB</span>
+                  <span class="rating new">Newly Acquired</span>
+                  <span class="stars">
+                     <span class="star blue"></span>
+                     <span class="star blue"></span>
+                     <span class="star gray"></span>
+                     <span class="star gray"></span>
+                  </span>
+               </span>
+            </span>
+            </a>
+         </div>
+         <div class="tool">
+            <a href="http://golang.org/">
+               <img src="/images/home/tool-go.jpg" title="Google Go" alt="Google Go" />
+               <span class="knowledge">
+                  <span class="inner">
+                     <span class="tech">Google Go</span>
+                     <span class="rating">Novice</span>
+                     <span class="stars">
+                        <span class="star blue"></span>
+                        <span class="star gray"></span>
+                        <span class="star gray"></span>
+                        <span class="star gray"></span>
                      </span>
                   </span>
-               </a>
-            </div>
-            
-            <div class="clear"></div>
+               </span>
+            </a>
          </div>
+         <div class="clear"></div>
       </div>
    </div>
 </div>
