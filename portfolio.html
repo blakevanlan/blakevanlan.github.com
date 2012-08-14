@@ -7,13 +7,13 @@ layout: default
    <div class="content">
       <div class="container">
          <h1>the <span class="green">exhibit</span></h1>
-         <h2>an explanation of my free time</h2>
+         <h2><span class="green">an explanation</span> of my free time</h2>
       </div>
    </div>
 </div>
 
 <div class="content section margin">
-   <div class="container text exhibits">
+   <div class="container exhibits">
       {% for post in site.posts %}
       <div class="exhibit">
          {% if post.website != null %}
@@ -34,6 +34,11 @@ layout: default
             {{ post.content }}
             <h3>Tech Used</h3>
             {{ post.tech }}
+            <h3><span class="orange">Designer</span> vs <span class="green">Coder</span></h3>
+            <div class="part">
+               <div class="designer p{{ post.designer }}"></div>
+               <div class="coder p{{ post.coder }}"></div>
+            </div>
          </div>
          <div class="clear"></div>
       </div>
