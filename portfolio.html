@@ -15,37 +15,38 @@ layout: default
 <div class="content section margin">
    <div class="container exhibits">
       {% for post in site.posts %}
-      <div class="exhibit">
-         {% if post.website != null %}
-            <a class="image-wrap" href="{{ post.website }}">
-               <img src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}" />
-            </a>
-         {% else %}
-            <div class="image-wrap">
-               <img src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}" />
+         {% if post.layout == null %}
+            <div class="exhibit">
+               {% if post.website != null %}
+                  <a class="image-wrap" href="{{ post.website }}">
+                     <img src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                  </a>
+               {% else %}
+                  <div class="image-wrap">
+                     <img src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                  </div>
+               {% endif %}
+               <div class="info">
+                  <h2>{{ post.title }}</h2>
+                  {% if post.website != null %}
+                     <a class="website" href="{{ post.website }}">{{ post.website }}</a>
+                  {% endif %}
+                  <span class="date">{{ post.date | date: "%B %Y" }}</span>
+                  {{ post.content }}
+                  <h3>Tech Used</h3>
+                  {{ post.tech }}
+                  <h3><span class="orange">Designer</span> vs <span class="green">Coder</span></h3>
+                  <div class="part">
+                     <div class="designer p{{ post.designer }}"></div>
+                     <div class="coder p{{ post.coder }}"></div>
+                  </div>
+               </div>
+               <div class="clear"></div>
             </div>
-         {% endif %}
-         <div class="info">
-            <h2>{{ post.title }}</h2>
-            {% if post.website != null %}
-               <a class="website" href="{{ post.website }}">{{ post.website }}</a>
+            {% if forloop.rindex0 > 0 %}
+            <div class="divider"></div>
             {% endif %}
-            <span class="date">{{ post.date | date: "%B %Y" }}</span>
-            {{ post.content }}
-            <h3>Tech Used</h3>
-            {{ post.tech }}
-            <h3><span class="orange">Designer</span> vs <span class="green">Coder</span></h3>
-            <div class="part">
-               <div class="designer p{{ post.designer }}"></div>
-               <div class="coder p{{ post.coder }}"></div>
-            </div>
-         </div>
-         <div class="clear"></div>
-      </div>
-      {% if forloop.rindex0 > 0 %}
-      <div class="divider"></div>
-      {% endif %}
-
+         {% endif %}
       {% endfor %}
    </div>
 </div>
