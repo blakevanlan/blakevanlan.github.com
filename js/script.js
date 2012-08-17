@@ -1,18 +1,12 @@
-(function($) {
-$(document).ready(function(){
-
-});
-})(jQuery);
-
 /* iOS orientation change bug fix */
 if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
-  var viewportmeta = document.querySelector('meta[name="viewport"]');
-  if (viewportmeta) {
-    viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
-    document.body.addEventListener('gesturestart', function() {
-      viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
-    }, false);
-  }
+   var viewportmeta = document.querySelector('meta[name="viewport"]');
+   if (viewportmeta) {
+      viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+      document.body.addEventListener('gesturestart', function() {
+         viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+      }, false);
+   }
 }
 
 /**
@@ -25,12 +19,12 @@ if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) 
  *  - <a>email at domain dot com</a>
  *
  * Author: Andrew Dunkman
+ * GitHub: https://github.com/adunkman/unspamify
  */
 (function($) {
    $.fn.unspamify = function() {
       return this.each(function () {
          var $this = $(this);
-         console.log("TEST");
          var email;
          var display;
 
@@ -64,5 +58,13 @@ if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) 
 
 $(document).ready(function () {
    $("a.email-text").unspamify();
-   console.log($);
+   $(".tweets").tweet({
+      avatar_size: 48,
+      count: 5,
+      fetch: 20,
+      filter: function(t){ return ! /^@\w+/.test(t["tweet_raw_text"]); },
+      username: "blakevanlan",
+      template: "{avatar}{text}{time}",
+      loading_text: "Loading&hellip;"
+   });
 });

@@ -1,27 +1,17 @@
 #blog-content {
    float: left;
    width: 67%;
-
-   transition: all 500ms;
-   -moz-transition: all 500ms; 
-   -webkit-transition: all 500ms;
-   -o-transition: all 500ms;
 }
 
 #sidebar {
    width: 33%;
    float: left;
-
-   transition: all 500ms;
-   -moz-transition: all 500ms; 
-   -webkit-transition: all 500ms;
-   -o-transition: all 500ms;
 }
 
 #sidebar .inner {
    margin: 12px 0 0 24px;
    padding: 12px;
-   background: #7D7D7D url(images/darkgray-noise.jpg) repeat;
+   background: #e8e8e8 url(images/gray-noise.jpg) repeat;
    -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, .6), inset 0 0 10px -2px rgba(255, 255, 255, .8);
 }
@@ -33,7 +23,6 @@
    background: transparent;
    /*color: rgba(240,126,19, 0.8);*/
    color: rgba(152,184,19, 0.8);
-   text-shadow: 1px 1px 10px rgba(0,0,0,.6);
    border-bottom: 1px solid #999;
 }
 
@@ -41,11 +30,35 @@
 
 }
 
-#sidebar .recent li {
-   margin: .2em 0;
+#sidebar .tweet_list li {
+   margin: 12px 0 24px 0;
+}
+
+#sidebar .tweet_list .tweet_avatar {
+   display: block;
+   float: left;
+   padding-top: 2px;
+}
+
+#sidebar .tweet_list .tweet_text, #sidebar .tweet_list .tweet_time {
+   display: block;
+   margin-left: 58px;
+   word-wrap: break-word;
+   line-height: 1.2em;
+}
+
+#sidebar .tweet_list .tweet_time {
+   margin-top: 3px;
+   font-size: .8em;
+   opacity: .6;
+}
+
+#sidebar .tweet_list .tweet_time:hover {
+   opacity: 1;
 }
 
 @media (max-width: 600px) {
    #blog-content { width: auto; float: none; }
    #sidebar { width: auto; float: none; }
+   #sidebar .inner { margin-left: 0; }
 }

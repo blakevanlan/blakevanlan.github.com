@@ -158,6 +158,7 @@ em {
 
 .main-banner {
    width: 100%;
+   margin-top: 12px;
    background-color: #1b676b;
    -webkit-box-shadow: 0 0 3px 2px rgba(0, 0, 0, .6);
    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .6);
