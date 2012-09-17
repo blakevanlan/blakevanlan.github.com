@@ -57,6 +57,14 @@
    font-size: .9em;
 }
 
+.website.offline {
+   color: #1E7175;
+}
+
+.website.offline em {
+   color: #2E2E2E;
+}
+
 @media (max-width: 620px) {
    .exhibit h2 { font-size: 1.7em }
 }

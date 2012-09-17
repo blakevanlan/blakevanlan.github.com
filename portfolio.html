@@ -17,19 +17,23 @@ layout: default
       {% for post in site.posts %}
          {% if post.layout == null %}
             <div class="exhibit">
-               {% if post.website != null %}
-                  <a class="image-wrap" href="{{ post.website }}">
-                     <img src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}" />
-                  </a>
-               {% else %}
+               {% if post.website == null or post.offline %}
                   <div class="image-wrap">
                      <img src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}" />
                   </div>
+               {% else %}
+                  <a class="image-wrap" href="{{ post.website }}">
+                     <img src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                  </a>
                {% endif %}
                <div class="info">
                   <h2>{{ post.title }}</h2>
                   {% if post.website != null %}
-                     <a class="website" href="{{ post.website }}">{{ post.website }}</a>
+                     {% if post.offline %}
+                        <span class="website offline">{{ post.website }} <em>(offline)</em></span>
+                     {% else %}
+                        <a class="website" href="{{ post.website }}">{{ post.website }}</a>
+                     {% endif %}
                   {% endif %}
                   <span class="date">{{ post.date | date: "%B %Y" }}</span>
                   {{ post.content }}
