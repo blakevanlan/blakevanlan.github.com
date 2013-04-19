@@ -57,4 +57,13 @@ $(document).ready(function () {
       template: "{avatar}{text}{time}",
       loading_text: "Loading&hellip;"
    });
+   // Replace images with 2x versions for toolbox
+   if ((window.devicePixelRatio || 1) > 1) {
+      $(".toolbox .tool img").each(function (index) {
+         console.log(this);
+         $el = $(this)
+         src = $el.attr("src");
+         $el.attr("src", src.replace(".jpg", "@2x.jpg"));
+      });
+   }
 });

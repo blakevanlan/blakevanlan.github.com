@@ -68,6 +68,10 @@
    color: #2E2E2E;
 }
 
+.tech-used {
+   margin-top: 0;
+}
+
 @media (max-width: 620px) {
    .exhibit h2 { font-size: 1.7em }
 }

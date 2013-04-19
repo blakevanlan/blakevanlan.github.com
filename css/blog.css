@@ -62,3 +62,9 @@
    #sidebar { width: auto; float: none; }
    #sidebar .inner { margin-left: 0; }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+   #sidebar .inner {
+      background-size: 50px 50px;
+   }
+}
