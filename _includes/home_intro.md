@@ -6,7 +6,7 @@
 </div>
 
 ## The introduction
-I am **Blake VanLandingham** (hopefully that's obvious at this point) and I grew up in Overland Park, KS. I'm just a fun loving guy who truly enjoys quality... *Quality* photography. *Quality* design. *Quality* websites. My focus is on **front end development** and **usability.** I love writing software that helps simplify our complex lives.
+I am **Blake VanLandingham** and I grew up in Overland Park, KS. I'm just a fun loving guy who truly enjoys quality... *Quality* photography. *Quality* design. *Quality* websites. My focus is on **front end development** and **usability.** I love writing software that helps simplify our complex lives.
 
 ## A little background
 
