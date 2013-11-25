@@ -4,12 +4,12 @@ layout: blog-post
 tab: blog
 ---
 
-A few months ago, the company I was working for at the time, [Fannect](http://www.fannect.me), needed a job queue with the ability to be parallelizable but also a mechanism to ensure that two conflicting jobs don't run at the same time. After poking around a bit I realized the time has come to use Redis for more than just a session store. This post will explain the design of [jobQ](https://github.com/blakevanlan/jobQ), the open source job queue I ended up developing, and the issues I ran into while building it.
+A few months ago, the company I was working for at the time, [Fannect](http://www.fannect.me), needed a job queue with the ability to be parallelizable but also have a mechanism to ensure that two conflicting jobs don't run at the same time. After poking around a bit I realized the time has come to use Redis for more than just a session store. This post will explain the design of [jobQ](https://github.com/blakevanlan/jobQ), the open source job queue I ended up developing, and highlight the main issues I ran into while building it.
 <!-- end excerpt -->
 
 ## Starting Off
 
-Through my research, I stumbled across a very full featured job queue intuitively dubbed [Kue](http://learnboost.github.io/kue/). At the time, it didn't offer any kind of locking mechanism but it did serve as good inspiration. I decided to heavy base the external API off of Kue but I wanted to make use Redis's pub/sub messaging (Kue uses polling).
+Through my research, I stumbled across a very full featured job queue intuitively dubbed [Kue](http://learnboost.github.io/kue/). At the time, it didn't offer any kind of locking mechanism but it did serve as good inspiration. I decided to heavily base the external API off of Kue but I wanted to make use Redis's pub/sub messaging (Kue uses polling).
 
 One of the awesome features Redis provides is its publish/subscribe messaging system. For those of you unfamiliar with Redis pub/sub [read this](http://en.wikipedihttp://redis.io/topics/pubsub)! 
 
@@ -70,7 +70,7 @@ this.redis.multi()
 
 ## Redis Client Reconnects
 
-There was only one other issue that stumped me for awhile. After implementing all the pieces described above, everything seemed to work for around 30 minutes before the worker would stop processing. After some (a lot) of hair pulling, I finally thought to <code>console.log</code>ged when the Redis clients were emitting <code><span class="s1">'end'</span></code>, meaning the underlining connection was closed. This lead me to discover that the Redis clients were cycling and if the worker was in a waiting state (subscribed to <code><span class="s1">'new_job'</span></code> channel) when the cycling occurred then that worker would not properly receive messages after the reconnect. The fix was simply to unsubscribe and then resubscribe when the client was up again.
+There was only one other issue that stumped me for awhile. After implementing all the pieces described above, everything seemed to work for around 30 minutes before the worker would stop processing. After some (a lot) of hair pulling, I finally thought to <code>console.log</code> when the Redis client emitted an <code><span class="s1">'end'</span></code>, meaning the underlining connection was closed. This led me to discover that the Redis clients were cycling and if the worker was in a waiting state (subscribed to <code><span class="s1">'new_job'</span></code> channel) when the cycling occurred, then that worker would not properly receive messages after the reconnect. The fix was simply to unsubscribe and then resubscribe when the client was up again.
 
 {% highlight javascript %}
 var Worker = function (redisClient) {
