@@ -78,7 +78,19 @@ h1 {
    padding: 12px;
    margin-top: 12px;
    margin-bottom: 12px;
+   text-transform: lowercase;
+   text-decoration: none;
 }
+
+h1 .subtitle,
+h1 .sep {
+   font-size: 22px;
+   font-weight: normal;
+   color: #999;
+   text-transform: none;
+   margin-left: 3px;
+}
+
 h2 {
    font-size: 1.5em;
    margin-top: 20px;
@@ -96,7 +108,6 @@ h4 {
 p {
    color: #2E2E2E;
    margin: 12px 0;
-   /*font-size: .9em;*/
    font-weight: 300;
    line-height: 1.6em;
 }
@@ -109,6 +120,10 @@ a:visited {
 }
 a:hover, a:active {
    color: #269aa0;
+}
+
+a.no-underline {
+   text-decoration: none;
 }
 
 strong {
@@ -339,6 +354,3 @@ em {
       background-size: 50px 50px;
    }
 }
-
-::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
-::selection { background: #5af; color: #fff; text-shadow: none; }​

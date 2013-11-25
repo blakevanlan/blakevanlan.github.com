@@ -12,9 +12,9 @@
    <link rel="stylesheet" href="/css/index.css" media="screen"/>
    <link rel="stylesheet" href="/css/portfolio.css" media="screen" />
    <link rel="stylesheet" href="/css/blog.css" media="screen" />
+   <link rel="stylesheet" href="/css/syntax.css" media="screen" />
 
    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-   <script type="text/javascript" src="/js/jquery.tweet.js"></script>
    <script type="text/javascript" src="/js/script.js"></script>
 
    <title>Blake VanLandingham</title>
@@ -39,7 +39,7 @@
                      <span class="nav-icon portfolio"></span>
                      <span class="nav-label">portfolio</span>
                   </a>
-                  <a href="/blog.html" class="nav-item {% if page.url == '/blog.html' %}active{% endif %}">
+                  <a href="/blog.html" class="nav-item {% if page.url == '/blog.html' or page.tab == 'blog' %}active{% endif %}">
                      <span class="nav-icon blog"></span>
                      <span class="nav-label">blog</span>
                   </a>

@@ -6,8 +6,10 @@ layout: default
    <div class="highlight"></div>
    <div class="content">
       <div class="container">
-         <h1>{{ page.title }}</h1>
-         <h2>{{ page.tagline }}</h2>
+         <a href="/blog.html" class="no-underline">
+            <h1>the <span class="green">blog</span></h1>
+            <h2>some tagline here</h2>
+         </a>
       </div>
    </div>
 </div>
@@ -17,18 +19,12 @@ layout: default
 
       <div id="blog-content">
          {{ content }}
-
-         <!-- {% for post in site.posts %}
-            {% if post.layout == 'blog' %}
-              
-            {% endif %}
-         {% endfor %} -->
          <div class="clear"></div>
       </div>
-      <div id="sidebar">
+       <div id="sidebar">
          <div class="inner">
-            <h1>tweets</h1>
-            <div class="tweets">
+            <h1><a href="https://github.com/blakevanlan">recent repos</a></h1>
+            <div class="github">
             </div>
          </div>
       </div>

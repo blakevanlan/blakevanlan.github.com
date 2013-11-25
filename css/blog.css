@@ -1,6 +1,11 @@
 #blog-content {
    float: left;
    width: 67%;
+   min-height: 400px
+}
+
+#blog-content img {
+   width: 100%
 }
 
 #sidebar {
@@ -20,17 +25,22 @@
    padding: 0 0 .25em 0;
    margin-top: 0;
    box-shadow: none;
+   border-bottom: 1px solid #999;
+}
+
+#sidebar h1 a {
    background: transparent;
    /*color: rgba(240,126,19, 0.8);*/
    color: rgba(152,184,19, 0.8);
-   border-bottom: 1px solid #999;
+   text-decoration: none;
 }
+
 
 #sidebar .recent {
 
 }
 
-#sidebar .tweet_list li {
+#sidebar .repo li {
    margin: 12px 0 24px 0;
 }
 
@@ -57,7 +67,25 @@
    opacity: 1;
 }
 
-@media (max-width: 600px) {
+#sidebar .repo a {
+   font-family: 'Dosis', 'Arial', sans-serif;
+   font-size: 1.4em;
+   margin: 8px 0 8px 0;
+   display: block;
+}
+
+#sidebar .repo .fork {
+   font-size: 13px;
+   display: inline-block;
+   margin-left: 5px;
+}
+
+
+#sidebar .repo .desc {
+   font-size: .9em;
+}
+
+@media (max-width: 800px) {
    #blog-content { width: auto; float: none; }
    #sidebar { width: auto; float: none; }
    #sidebar .inner { margin-left: 0; }

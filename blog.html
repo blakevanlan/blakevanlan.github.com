@@ -1,7 +1,17 @@
 ---
 layout: blog
-title: the <span class="green">blog</span>
-tagline: some tagline here
 ---
 
-<h1>blog to be</h1>
+{% for post in site.posts %}
+   {% if post.layout == 'blog-post' %}
+      <a href="{{ post.url }}" class="no-underline">
+         <h1>
+            {{ post.title }}
+            <span class="sep">|</span>
+            <span class="subtitle">{{ post.date | date: "%B %Y" }}</span>
+         </h1>
+      </a>
+      <p>{{ post.content | split:'<!-- end excerpt -->' | first }}</p>
+      <h4><a href="{{ post.url }}">Read More &raquo;</a></h4>
+   {% endif %}
+{% endfor %}
