@@ -85,6 +85,10 @@
    font-size: .9em;
 }
 
+#disqus_thread {
+   padding-top: 40px;
+}
+
 @media (max-width: 800px) {
    #blog-content { width: auto; float: none; }
    #sidebar { width: auto; float: none; }
