@@ -11,7 +11,7 @@ A few months ago, the company I was working for at the time, [Fannect](http://ww
 
 Through my research, I stumbled across a very full featured job queue intuitively dubbed [Kue](http://learnboost.github.io/kue/). At the time, it didn't offer any kind of locking mechanism but it did serve as good inspiration. I decided to heavily base the external API off of Kue but I wanted to make use Redis's pub/sub messaging (Kue uses polling).
 
-One of the awesome features Redis provides is its publish/subscribe messaging system. For those of you unfamiliar with Redis pub/sub [read this](http://en.wikipedihttp://redis.io/topics/pubsub)! 
+One of the awesome features Redis provides is its publish/subscribe messaging system. For those of you unfamiliar with Redis pub/sub [read this](http://redis.io/topics/pubsub)! 
 
 ## The Design
 
