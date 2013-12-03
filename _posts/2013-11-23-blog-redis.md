@@ -21,6 +21,10 @@ Below is a diagram depicting the overall flow of a worker:
 
 And for you text-based folks, here it is in words! The worker first looks for a job. If one is available it attempts to acquire the lock for that specific job. If the worker succeeds in acquiring the lock, it preceeds to process the job and then start the process over. If the worker fails to acquire the lock, it skips that job and looks for the next available job. When no available jobs remain in the queue, the worker goes into a waiting mode by subscribing to the <code><span class="s1">'new_job'</span></code> channel. This channel is published to every time a new job enters the queue.
 
+It may seem that this job queue only supports a single worker because of the lock; however, the locks are meant to be very specific so as to mitigate the number of blocked jobs. When a worker finds a locked job it skips over that job and trys to process the next one. For more information, check out the project [GitHub](https://github.com/blakevanlan/jobQ).
+
+## Setting Up Pub/Sub
+
 Here's the code for subscribing to a channel. In this example, and all the following ones, the [<code>node_redis</code>](https://github.com/mranney/node_redis) npm package is being used and <code>this.redis</code> is a redis client instance. The example is quite abbreviated to get to the meat and potatoes.
 
 {% highlight javascript %}
