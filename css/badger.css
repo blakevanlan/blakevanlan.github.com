@@ -1,0 +1,79 @@
+html, body {
+   background: #eee;
+   font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+   margin: 25px auto 25px auto;
+   width: 920px;
+}
+
+header {
+   height: 280px;
+}
+
+.logo {
+   float: left;
+   height: 305px;
+   width: 305px;
+}
+
+.header-text {
+   margin-left: 340px;
+   position: relative;
+}
+
+.header-text h1 {
+   font-size: 80px;
+   color: #7468dc;
+   margin-top: -18px;
+}
+
+.header-text h2 {
+   font-size: 20px;
+   font-weight: 300;
+   color: #555;
+   padding: 86px 0 0 5px;
+   margin: 0;
+}
+
+.header-text .sep {
+   position: absolute;
+   top: 50%;
+   width: 2px;
+   background: #bbb;
+   height: 200px;
+   margin-top: -60px;
+   left: -28px;
+}
+
+h1 {
+   font-size: 48px;
+   font-weight: 300;
+   color: #333;
+   margin: 25px 0 15px; 
+}
+
+.body-text {
+   padding: 0 45px;
+   font-weight: 300;
+}
+
+table {
+   width: 100%;
+}
+table th, table td {
+   padding: 8px;
+   text-align: left;
+   vertical-align: top;
+   border-top: 1px solid #dddddd;
+}
+table thead th {
+   font-weight: 600
+}
+thead:first-child tr:first-child th, thead:first-child tr:first-child td {
+   border-top: 0;
+}
+tbody {
+   font-weight: 300;
+}
